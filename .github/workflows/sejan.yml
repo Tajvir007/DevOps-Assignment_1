@@ -1,0 +1,12 @@
+jobs:
+  print_text_file:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout git repository's code
+        uses: actions/checkout@v2
+
+      - name:  Read the hello.txt file
+        run: |
+            ls -l
+            cat hello.txt
