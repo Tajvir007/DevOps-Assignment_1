@@ -1,12 +1,21 @@
-jobs:
-  print_text_file:
-    runs-on: ubuntu-latest
+name: Print Text File
+    
+on: 
+  push:
+    branches:
+      - master
 
+jobs: 
+   read_the_file:
+    runs-on: ubuntu-latest
     steps:
-      - name: Checkout git repository's code
+      - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name:  Read the hello.txt file
+      - name: Read and print the text file
         run: |
-            ls -l
-            cat hello.txt
+          ls -l
+          cat hello.txt
+          
+
+    
